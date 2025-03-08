@@ -1,0 +1,9 @@
+This is the HTML versions of certain pages of the website.
+
+Admin Side File:
+ - Admin Dashboard (UI Revision)
+ - Lesson Edit (UI Revision)
+
+User Side:
+ - Add New Modules (Intermediate)
+ - Add New Modules (Advanced)
