@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson Creation</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <link rel="stylesheet" href="navigation-stuff.css">
+  <link rel="stylesheet" href="lesson-edit.css">
+</head>
+<body>
+    <!-- TODO: Bumaliw sa pag-gagawa ng lesson editor -->
+  <header class="container-fluid" style="position: fixed; z-index: 69; background-color: #dceefc;">
+    <div class="row">
+        <div class="col-6">
+            <h1 class="logo-text">Module Edit</h1>
+            <img src="webcraft_logo.png" alt="" class="logo">
+        </div>
+        <div class="col-6">
+          <a href="/pr/adminpanel/module-list.php"><button class="btn btn-danger btn-right mt-4" style="float: right; padding: 10px 30px">Go Back</button></a>
+
+        </div>
+    </div>  
+  </header>
+  <div class="container-xl" style="padding-top: 250px">
+
+  </div>
+  <div class="container-xl customize-bar bg-light my-5" style="border-radius: 20">
+    <div class="row justify-content-center">
+  <form class="col-12 col-md-2" action="quiz-create.php" method="get">
+    <input name="moduleName"  style="display:none">
+    <input name="lessonDesig" style="display:none">
+    <button class="btn btn-primary mb-2 btn-block rounded-pill text-center" name="check-other-lesson" type="submit" name="create_new_lesson"><i class="fa fa-book" aria-hidden="true"></i> Create Quiz</button>
+  </form>
+  <form class="col-12 col-md-2" action="edit-quiz.php" method="get">
+    <input name="moduleName"  style="display:none">
+    <input name="lessonDesig" style="display:none">
+    <button class="btn btn-primary mb-2 btn-block rounded-pill text-center" name="check-other-lesson" type="submit" name="create_new_lesson"><i class="fa fa-edit" aria-hidden="true"></i> Edit/Manage Quiz</button>
+  </form>
+    <form class="col-12 col-md-2" action="create-new-lesson.php" method="get">
+      <input name="moduleName" style="display:none"> 
+      <button class="btn btn-primary btn-block rounded-pill text-center mb-2" name="create-btn" type="submit" name="create_new_lesson"><i class="fa fa-plus-circle" aria-hidden="true"></i> Create New</button>
+    </form>
+    <form class="col-12 col-md-2" action="lesson-list.php" method="get">
+      <input name="moduleName" style="display:none">
+      <button class="btn btn-primary btn-block rounded-pill text-center mb-2" name="check-other-lesson" type="submit" name="create_new_lesson"><i class="fa fa-book" aria-hidden="true"></i> Edit Other Lessons</button>
+    </form>
+    <form class="col-12 col-md-2" action="edit-module.php" method="get">
+      <input name="moduleName" style="display:none">
+      <button  class="btn btn-primary btn-block rounded-pill text-center" name="check-other-lesson" type="submit" name="create_new_lesson"><i class="fa fa-bookmark" aria-hidden="true"></i> Edit Module</button>
+    </form>
+
+
+    </div>
+    <form method="post" action="lesson-create-this.php">
+      <h1 class="text-left">Lesson Name:</h1>
+            <input class="mb-3" name="lessonName" style="min-width:100%">
+      <h1 class="text-left">Lesson Content:</h1>
+      <p class="text-danger text-left">Do note this website uses Bootstrap CDN. All of the code will be inserted inside the body of the HTML.</p>
+            <textarea 
+            class="mb-3"
+            style="min-width: 100%; height:1000px;"
+            name="lessoncontedit"
+           
+            >
+            </textarea>
+            <input name="moduleName"  style="display:none">
+            <input name="lessonDesig" style="display:none">
+            <div class="bg-success mb-4" id="quizbuttonEnabled" style="border-radius: 20px"> 
+              <h1 class="text-light">Enable Quiz Button for this lesson page?</h1>
+              <p class="text-light">Turning this one will make the quiz button show up at the bottom of the page. </p>
+              <p class="text-light">Quiz Designation</p>
+              <select name="quiz_list" required>
+
+                     <option value='$quizName' selected>$quizName</option>
+             
+                      <option value='$quizName'>$quizName</option>
+
+                  echo "<option value='NULL'>NO QUIZZES</option>";
+
+
+            </select><br>
+ 
+                <label class="text-light"><input type="radio" name="enableQuiz" value="1" checked>YES</label>
+                <label class="text-light"><input type="radio" name="enableQuiz" value="0">NO</label>
+    
+ 
+
+            </div>
+            <p class="text-danger">If you wish to use the html compiler, use &lt;htmlcompiler&gt; tag alongside typing a value for it in its attributes
+            don't forget to use closing tags please. </p>
+   
+              <button class="btn btn-primary col-6 mb-1" type="submit" name="submit">SUBMIT</button>
+              <button class="btn btn-danger col-6 mb-5" type="submit" name="delete">DELETE</button>
+            </form>
+ 
+            </div>
+            <div class="container-xl">
+
+            </div>
+
+        
+  </div>
+
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+
+</body>
+</html>

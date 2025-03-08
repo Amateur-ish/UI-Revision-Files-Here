@@ -1,0 +1,88 @@
+
+  
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module Creation</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="navigation-stuff.css">
+    <link rel="stylesheet" href="admin-dashboard.css">
+    <style> 
+    .row h1 {
+      font-size: 30px !important
+    }
+    </style>
+  </head>
+  <body>
+      <!-- TODO: Bumaliw sa pag-gagawa ng lesson editor -->
+    <header class="container-fluid" style="position: fixed; z-index: 69; background-color: #dceefc;">
+      <div class="row">
+          <div class="col-6 pt-3">
+            <i class="fa-solid fa-bars fa-2xl" aria-hidden="true" style="cursor: pointer" onclick="showSidebar()"></i>
+          </div>
+      </div>  
+    </header> 
+    <div class="sidebar" id="sidebar">
+        <img src="webcraft_logo.png" alt="" class="logo" style="max-width: 30%; margin: 10px 0px 15px 20px">
+        <i class="fa-solid fa-xmark fa-2xl" aria-hidden="true" style="cursor: pointer; margin-left: 80px" onclick="showSidebar()"></i>
+        <hr style="max-width: 90%; margin: auto">
+        <div class="container-fluid">
+            <ul class="nav flex-column mb-auto" >
+                <a href="/pr/adminpanel/admin-dashboard.php"><li><i class="fa fa-tachometer" aria-hidden="true"></i> Admin Dashboard</li></a>
+                <a href="/pr/options/home-page.php"><li><i class="fa fa-eye" aria-hidden="true"></i> View As User</li></a>
+                <a href="/pr/adminpanel/module-list.php"><li><i class="fa fa-list" aria-hidden="true"></i> Module List</li></a>
+                <a href="/pr/adminpanel/user-dashboard.php"><li><i class="fa fa-user" aria-hidden="true"></i> Manage User</li></a>
+              
+                <a href="/pr/adminpanel/logout.php"><li><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</li></a>
+            </ul>
+        </div>
+    </div>
+    <div class="container-xxl" style="padding-top: 100px"></div>
+    <div class="container-xxl">
+        <h1 class="pt-5 mb-5">ADMIN DASHBOARD</h1>
+    </div>
+    <div class="container-xxl bg-light my-3" style="border-radius: 20px;">
+        <div class="row">
+            <img src="https://static-00.iconduck.com/assets.00/user-circle-icon-2048x2048-rbk3fbd1.png"
+            style="max-width: 200px; margin-top: auto; margin-bottom:auto "
+            class="col-6"
+            >
+            <div class="col-6">
+                <h1>Current Users</h1>
+                <p>69420</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-xxl bg-light pb-5 pt-3 mb-5" style="overflow-x:auto; border-radius: 20px;">
+        <table class="table table-striped">
+            <thead class="">
+              <tr>
+                <th scope="col" style="font-weight:normal;">USERNAME</th>
+                <th scope="col" style="font-weight:400;">ROLE</th>
+                <th scope="col" style="font-weight:400;">QUIZ COMPLETED</th>
+                <th scope="col" style="font-weight:400;">DATE REGISTRATION</th>
+              </tr>
+            </thead>
+            <tbody>
+                   
+
+              <tr>
+                <th scope="row">Admin</th>
+                <td class="" style="font-weight: bold;">ADMIN<br><span class="text-secondary" style="font-weight: normal;">Administrator</span></td>
+                <td>69</td>
+                <td>April 1st 2460</td>
+              </tr>
+
+            </tbody>
+          </table>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <script src="input.js"></script>
+  </body>
+  </html>

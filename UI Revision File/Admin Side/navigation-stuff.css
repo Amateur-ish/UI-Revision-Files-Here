@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&display=swap');
+
+
+
+body {
+    
+    font-size: 15pt;
+    background-color: #dceefc !important;
+    overflow-x: hidden; 
+  }
+
+
+  header {
+    background-color: #dceefc;
+    padding-bottom: 20px;
+    box-shadow: 3px 3px 15px black;
+    z-index: 10;
+  }
+
+  header .logo {
+    width: auto;
+    height: 100px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+  header h1.logo-text {
+    font-family: 'Pixelify Sans';
+    font-size: 25px;
+    position: absolute;
+    top: 38px;
+    left: 140px;
+    
+  }
+
+  .dropdown-menu {
+    min-width: 400px !important;
+
+}
+  
+  .burger-menu {
+      display: block; /* Hidden on desktop by default */
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 24px;
+      cursor: pointer;
+      position: absolute;
+      top: 30px;
+      right: 20px; /* Position in the top-right corner */
+  }
+  
+  .burger-menu .line {
+      width: 100%;
+      height: 4px;
+      background-color: #1c1255;
+      margin-top: 5px;
+      border-radius: 5px;
+  }
+
+  .dropdown-divider {
+    border-top: 1px solid #000000 !important
+  }
+
+  .dropdown-header {
+    font-size: 1.1rem !important
+  }
+
+  
+
+  .pop-up {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 70;
+    left: auto;
+    top: auto;
+    display: none;  
+}
+
+.sidebar {
+  position: fixed;
+  height: 120vh;
+  display:none; 
+  width: 300px;
+  background-color: white;
+  z-index: 690;
+ 
+}
+
+li {
+  margin: 10px 0px 10px 5px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px  
+}
+li:hover{
+  background-color: blue;
+  color: white ;
+}
+
+li:hover a{
+  color: white ;
+}
+
+
+a {
+  text-decoration: none !important;
+  color: black;
+  transition: 0.1s ease-in-out;
+}
+
+.mvment {
+  transition: 0.2s ease-in-out;
+  left:0;
+}
+
+
